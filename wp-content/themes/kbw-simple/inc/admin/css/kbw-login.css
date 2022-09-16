@@ -1,0 +1,28 @@
+#login {width: 355px;}
+body.login {background-color: #1a232f;}
+.login h1 a {
+    width: 300px;
+    height: 66px;
+    background-image: url("../images/logo-admin.png")!important;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.message.register {display: none}
+.login form#loginform {
+    border: 1px solid rgba(0, 0, 0, .2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+.login label[for] {color: #fff !important;}
+.login form .input, .login input[type="text"] { font-size: 13pt !important;}
+input#rememberme {height: 18px;width: 18px;display: inline;vertical-align: middle;margin: 2px 5px 0 0;float: left;}
+.login #nav, .login #backtoblog {width: 50%;display: inline-block;margin: 0;padding: 20px 0 8px;}
+.login #nav {float: left;}
+.login #backtoblog a {float: right;}
+.login #nav a, .login #backtoblog a {color: #fff;}
+.login .privacy-policy-page-link {margin: 20px 0 10px;}
+div.updated, .login .message {background-color: lightYellow;border-color: #E6DB55;font-family: 'Open Sans Condensed', sans-serif;font-size: 16px;font-weight: 700;}
+body.login div#login form#loginform input#user_pass,
+body.login div#login form#loginform input#user_login {font-size: 12px;}
