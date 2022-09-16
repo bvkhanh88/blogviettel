@@ -468,7 +468,7 @@ function kbw_load_kbw_post_shortcode()
                         esc_html__('No', 'kbw') => 'false'
                     ),
                     'std' => 'true',
-                    'dependency' => array('element' => 'layout', 'value' => array('slider')),
+                    'dependency' => array('element' => 'layout', 'value' => array('slider', 'grid')),
                     'edit_field_class' => 'vc_col-md-3 vc_column'
                 ),
                 array(

@@ -258,6 +258,7 @@ a.alink-arrow:before, .alink-arrow-wrap a:before {
 }
 #page .bc-wrap img {width: 100vw;position: absolute;top: 0;left: 50%;transform: translateX(-50%);}
 #page .bc-wrap .bc-inner {flex-direction: column;position: relative;z-index: 1;}
+#page .bc-wrap .bc-inner > div {width: 100%;text-align: center;}
 #page .bc-wrap .kbw-breadcrumb {margin-bottom: 12px;padding: 0;}
 #page .bc-wrap .kbw-breadcrumb a, #page .bc-wrap .kbw-breadcrumb span {color: #fff;font-size: 16px;font-weight: 400;text-transform: none;}
 #page .bc-wrap .kbw-breadcrumb span.current {color: #EE0033;}

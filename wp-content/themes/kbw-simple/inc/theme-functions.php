@@ -174,7 +174,7 @@ function kbw_breadcrumbs()
                 echo $before . get_the_title() . $after;
             } elseif (is_tag()) {
                 echo $before;
-                printf(__('Tag Archives: %s', 'kbw'), single_tag_title('', false));
+                echo single_tag_title('', false);
                 echo $after;
             } elseif (is_author()) {
                 global $author;
@@ -204,48 +204,59 @@ function kbw_breadcrumbs()
 /**
  * Page titles function
  */
-function kbw_title()
+function kbw_title($echo = true)
 {
     if (is_home()) {
         if (get_option('page_for_posts', true)) {
-            echo get_the_title(get_option('page_for_posts', true));
+            $page_title = get_the_title(get_option('page_for_posts', true));
         } else {
-            esc_html_e('Latest Posts', 'kbw');
+            $page_title = __('Latest Posts', 'kbw');
         }
     } elseif (is_archive()) {
-        $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
-        if ($term) {
-            echo $term->name;
-        } elseif (is_post_type_archive()) {
-            if (get_search_query()) {
-                printf(__('Search Results for: <small>%s</small>', 'kbw'), get_search_query());
-            } else {
-                echo get_queried_object()->labels->name;
-            }
-        } elseif (is_day()) {
-            printf(__('Daily Archives: %s', 'kbw'), get_the_date());
-        } elseif (is_month()) {
-            printf(__('Monthly Archives: %s', 'kbw'), get_the_date('F Y'));
-        } elseif (is_year()) {
-            printf(__('Yearly Archives: %s', 'kbw'), get_the_date('Y'));
-        } elseif (is_author()) {
-            printf(__('Author: %s', 'kbw'), '<span class="vcard">' . get_the_author() . '</span>');
-        } elseif (is_tax()) {
-            $tax = get_taxonomy(get_queried_object()->taxonomy);
-            /* translators: Taxonomy term archive title. 1: Taxonomy singular name, 2: Current taxonomy term */
-            printf(__('%1$s: %2$s'), $tax->labels->singular_name, single_term_title('', false));
+        //$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+        if (is_category()) {
+            $page_title = single_cat_title('', false);
         } elseif (is_tag()) {
             /* translators: Tag archive title. %s: Tag name */
-            printf(__('Tag: %s', 'kbw'), single_tag_title('', false));
+            $page_title = single_tag_title('', false);
+        } elseif (is_tax()) {
+            $page_title = single_term_title('', false);
+        } elseif (is_post_type_archive()) {
+            if (get_search_query()) {
+                $page_title = sprintf(__('Search Results for: <small>%s</small>', 'kbw'), get_search_query());
+            } else {
+                $page_title = get_queried_object()->labels->name;
+            }
+        } elseif (is_day()) {
+            $page_title = sprintf(__('Daily Archives: %s', 'kbw'), get_the_date());
+        } elseif (is_month()) {
+            $page_title = sprintf(__('Monthly Archives: %s', 'kbw'), get_the_date('F Y'));
+        } elseif (is_year()) {
+            $page_title = sprintf(__('Yearly Archives: %s', 'kbw'), get_the_date('Y'));
+        } elseif (is_author()) {
+            $page_title = sprintf(__('Author: %s', 'kbw'), '<span class="vcard">' . get_the_author() . '</span>');
         } else {
-            single_cat_title();
+            $page_title = single_cat_title('', false);
         }
     } elseif (is_search()) {
-        printf(__('Search Results for: <small>%s</small>', 'kbw'), get_search_query());
+        $page_title = sprintf(__('Search Results for: <small>&ldquo;%s&rdquo;</small>', 'kbw'), get_search_query());
+        if (get_query_var('paged')) {
+            /* translators: %s: page number */
+            $page_title .= sprintf(__('&nbsp;&ndash; Page %s', 'kbw'), get_query_var('paged'));
+        }
     } elseif (is_404()) {
-        esc_html_e('Not Found', 'kbw');
+        $page_title = __('Not Found', 'kbw');
     } else {
-        the_title();
+        $page_title = get_the_title();
+    }
+    
+    $page_title = apply_filters('kbw_page_title', $page_title);
+    
+    if ($echo) {
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        echo $page_title;
+    } else {
+        return $page_title;
     }
 }
 

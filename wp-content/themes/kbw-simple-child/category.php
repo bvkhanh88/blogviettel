@@ -42,7 +42,7 @@ $banner_id = !empty($banner_id) ? $banner_id : 55;
             <img src="<?php echo kbw_wp_img_src($banner_id, 'full') ?>" alt="Banner">
             <div class="container p-0">
                 <div class="bc-inner d-flex justify-content-center align-items-center">
-                    <h1 class="title category postsby"><?php echo single_cat_title('', false); ?></h1>
+                    <h1 class="title category postsby"><?php kbw_title(); ?></h1>
                     <?php kbw_breadcrumbs(); ?>
                     <?php echo kbw_search_form('post') ?>
                 </div>
