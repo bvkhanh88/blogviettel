@@ -238,7 +238,7 @@ a.alink-arrow:before, .alink-arrow-wrap a:before {
 /* Breadcrumb Title */
 #page .bc-wrap {
     position: relative;
-    padding: 50px 20px;
+    padding: 50px 15px;
     margin-top: -20px;
     margin-bottom: 30px;
     background-color: #121B51;
@@ -325,7 +325,7 @@ a.alink-arrow:before, .alink-arrow-wrap a:before {
 /* Detail Item Style */
 .post-single-content {}
 #page.single .bc-wrap .kbw-breadcrumb span.current, #page.single .bc-wrap .kbw-breadcrumb span:nth-last-child(2) {display: none;}
-#page.single .bc-wrap img {top: auto;}
+#page.single .bc-wrap img {}
 #page.single .bc-wrap .kbw-breadcrumb span:nth-last-child(3) a {color: #EE0033;}
 #page.single .bc-wrap .time {color: #BDBDBD;padding: 10px 0 20px;}
 #page.single .bc-wrap .time a {color: #BDBDBD;}
@@ -370,6 +370,7 @@ article .tags {padding-top: 0;}
 
 /* Archive */
 .item-list .recent-item {display: flex;flex-wrap: wrap;}
+.item-list .recent-item.default .post-box-title {background: none;padding: 0;min-height: 10px;}
 .item-list .post-thumbnail {margin-right: 25px;}
 .item-list .recent-item .post-thumbnail a, .listing-featured .recent-item .post-thumbnail a:hover {background-color: transparent;}
 .item-list .recent-item .post-thumbnail a img {opacity: 1!important;}
