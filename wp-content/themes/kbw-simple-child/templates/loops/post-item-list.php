@@ -62,7 +62,7 @@ $elm_class = $kbw_is_slider != 'yes' ? ' col-' . (12 / $kbw_column_mb) . ' col-m
                     <p><?php echo kbw_truncate(get_the_excerpt($post->ID), $kbw_excerpt_length, 'words'); ?></p>
                 </div>
             <?php endif; ?>
-            <div class="kbw-button-wrap"><a href="<?php echo get_the_permalink() ?>" class="view-more"><?php echo __('View more &raquo;', 'kbw') ?></a></div>
+            <div class="kbw-button-wrap"><a href="<?php echo get_the_permalink() ?>" class="view-more"><?php echo __('Read more &raquo;', 'kbw') ?></a></div>
             <?php do_action('kbw_after_post_loop_item_list_excerpt', $kbw_post_type); ?>
         </div>
     </div>
