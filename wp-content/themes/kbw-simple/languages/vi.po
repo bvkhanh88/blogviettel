@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kabiweb Theme - Translations\n"
-"POT-Creation-Date: 2022-02-19 23:50+0700\n"
-"PO-Revision-Date: 2022-02-19 23:50+0700\n"
+"POT-Creation-Date: 2022-09-17 09:43+0700\n"
+"PO-Revision-Date: 2022-09-17 09:44+0700\n"
 "Last-Translator: \n"
 "Language-Team: bvkhanh88@gmail.com\n"
 "Language: vi_VN\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -40,35 +40,35 @@ msgstr ""
 msgid "RETURN HOME"
 msgstr ""
 
-#: inc/admin/admin.php:204 inc/admin/admin.php:281
+#: inc/admin/admin.php:204 inc/admin/admin.php:289
 msgid "Menu Manager"
 msgstr ""
 
-#: inc/admin/admin.php:205 inc/admin/admin.php:287
+#: inc/admin/admin.php:205 inc/admin/admin.php:295
 msgid "Edit Module"
 msgstr ""
 
-#: inc/admin/admin.php:334
+#: inc/admin/admin.php:342
 msgid "Introduction"
 msgstr ""
 
-#: inc/admin/admin.php:340
+#: inc/admin/admin.php:348
 msgid "Website Information"
 msgstr ""
 
-#: inc/admin/admin.php:342
+#: inc/admin/admin.php:350
 msgid "Hotline:"
 msgstr ""
 
-#: inc/admin/admin.php:343
+#: inc/admin/admin.php:351
 msgid "Email:"
 msgstr ""
 
-#: inc/admin/admin.php:344
+#: inc/admin/admin.php:352
 msgid "Address:"
 msgstr ""
 
-#: inc/admin/admin.php:345
+#: inc/admin/admin.php:353
 msgid "Developer"
 msgstr ""
 
@@ -446,8 +446,9 @@ msgstr ""
 #: inc/admin/kbw-slider.php:254
 #: inc/lib/redux-framework/ReduxCore/inc/fields/slides/field_slides.php:145
 #: inc/lib/redux-framework/ReduxCore/inc/fields/slides/field_slides.php:200
-#: inc/shortcodes/kbw-custompost.php:285 inc/shortcodes/kbw-list-terms.php:303
-#: inc/shortcodes/kbw-post.php:421 inc/shortcodes/product-category.php:138
+#: inc/shortcodes/kbw-box.php:157 inc/shortcodes/kbw-custompost.php:262
+#: inc/shortcodes/kbw-custompost.php:583 inc/shortcodes/kbw-list-terms.php:312
+#: inc/shortcodes/kbw-post.php:424 inc/shortcodes/product-category.php:138
 #: inc/shortcodes/recent-products.php:108
 #: inc/shortcodes/recent-products.php:188
 msgid "Title"
@@ -495,7 +496,7 @@ msgid "Add New"
 msgstr "Thêm mới"
 
 #: inc/custom-post-types.php:24 inc/custom-post-types.php:51
-#: inc/theme-functions.php:360 inc/theme-functions.php:389
+#: inc/theme-functions.php:388 inc/theme-functions.php:417
 msgid "Edit"
 msgstr "Chỉnh sửa"
 
@@ -526,7 +527,7 @@ msgstr ""
 msgid "No %s found in Trash"
 msgstr ""
 
-#: inc/custom-post-types.php:45 inc/theme-functions.php:589 sidebar.php:20
+#: inc/custom-post-types.php:45 inc/theme-functions.php:617 sidebar.php:20
 msgid "Search"
 msgstr ""
 
@@ -595,10 +596,10 @@ msgstr ""
 msgid "Locations"
 msgstr ""
 
-#: inc/custom-post-types.php:272 inc/shortcodes/kbw-custompost.php:186
-#: inc/shortcodes/kbw-custompost.php:228 inc/shortcodes/kbw-post.php:171
-#: inc/shortcodes/kbw-post.php:188 inc/shortcodes/kbw-post.php:265
-#: inc/shortcodes/kbw-post.php:313
+#: inc/custom-post-types.php:272 inc/shortcodes/kbw-custompost.php:204
+#: inc/shortcodes/kbw-custompost.php:229 inc/shortcodes/kbw-post.php:171
+#: inc/shortcodes/kbw-post.php:189 inc/shortcodes/kbw-post.php:270
+#: inc/shortcodes/kbw-post.php:318
 msgid "View all"
 msgstr "Xem tất cả"
 
@@ -1412,8 +1413,14 @@ msgid "Font Weight &amp; Style"
 msgstr ""
 
 #: inc/lib/redux-framework/ReduxCore/inc/fields/typography/field_typography.php:281
-#: inc/shortcodes/kbw-custompost.php:512 inc/shortcodes/kbw-list-terms.php:494
-#: inc/shortcodes/kbw-post.php:640
+#: inc/shortcodes/kbw-box.php:204 inc/shortcodes/kbw-box.php:212
+#: inc/shortcodes/kbw-box.php:220 inc/shortcodes/kbw-box.php:228
+#: inc/shortcodes/kbw-custompost.php:516 inc/shortcodes/kbw-custompost.php:524
+#: inc/shortcodes/kbw-custompost.php:528 inc/shortcodes/kbw-custompost.php:532
+#: inc/shortcodes/kbw-custompost.php:540 inc/shortcodes/kbw-custompost.php:810
+#: inc/shortcodes/kbw-list-terms.php:503 inc/shortcodes/kbw-post.php:671
+#: inc/shortcodes/kbw-post.php:679 inc/shortcodes/kbw-post.php:683
+#: inc/shortcodes/kbw-post.php:687 inc/shortcodes/kbw-post.php:695
 msgid "Style"
 msgstr ""
 
@@ -3210,7 +3217,7 @@ msgstr ""
 msgid "Post / Page Information"
 msgstr ""
 
-#: inc/metaboxes.php:99
+#: inc/metaboxes.php:99 inc/shortcodes/kbw-box.php:171
 msgid "Price"
 msgstr ""
 
@@ -3247,7 +3254,7 @@ msgstr ""
 msgid "Job"
 msgstr ""
 
-#: inc/metaboxes.php:215
+#: inc/metaboxes.php:215 inc/shortcodes/kbw-box.php:178
 msgid "Link"
 msgstr ""
 
@@ -3307,119 +3314,215 @@ msgstr ""
 msgid "&laquo;"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:276
+#: inc/shortcodes/kbw-box.php:136
+msgid "KBW Box"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:138 inc/shortcodes/kbw-custompost.php:256
+#: inc/shortcodes/kbw-post.php:418
+msgid "KABIWEB"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:140
+msgid "KBW Box Description"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:144
+msgid "Image"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:147
+msgid "Select image from media library."
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:164
+msgid "Sub Title"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:185
+msgid "Link text"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:193
+msgid "Content"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:199
+msgid "Display Style"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:208 inc/shortcodes/kbw-slider.php:230
+msgid "Image size"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:216
+msgid "Element ID"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:219
+msgid "Enter element ID (Note: make sure it is unique and valid)."
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:224
+msgid "Extra class name"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:227
+msgid ""
+"Style particular content element differently - add a class name and refer to "
+"it in custom CSS."
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:232
+msgid "CSS box"
+msgstr ""
+
+#: inc/shortcodes/kbw-box.php:234
+msgid "Design Options"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:254
+msgid "KBW Custompost"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:258
+msgid "KBW Custompost Description"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:268 inc/shortcodes/kbw-custompost.php:590
+msgid "Post Type"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:275 inc/shortcodes/kbw-custompost.php:597
+#: inc/shortcodes/kbw-list-terms.php:327 inc/shortcodes/kbw-post.php:430
+msgid "Layout"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:365 inc/shortcodes/kbw-post.php:520
+msgid "Column gap"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:374 inc/shortcodes/kbw-post.php:529
+msgid "Image Size"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:381 inc/shortcodes/kbw-custompost.php:716
+#: inc/shortcodes/kbw-list-terms.php:319 inc/shortcodes/kbw-post.php:536
+msgid "Taxonomy"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:389 inc/shortcodes/kbw-custompost.php:723
+#: inc/shortcodes/kbw-post.php:544 inc/shortcodes/product-category.php:156
+msgid "Category"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:397 inc/shortcodes/kbw-custompost.php:730
+#: inc/shortcodes/kbw-post.php:552
+msgid "Category Link"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:405 inc/shortcodes/kbw-post.php:560
+msgid "Number Posts"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:413 inc/shortcodes/kbw-custompost.php:756
+#: inc/shortcodes/kbw-list-terms.php:485 inc/shortcodes/kbw-post.php:568
+msgid "Offset"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:421 inc/shortcodes/kbw-custompost.php:835
+#: inc/shortcodes/kbw-list-terms.php:541 inc/shortcodes/kbw-post.php:576
+#: inc/shortcodes/product-category.php:188
+#: inc/shortcodes/recent-products.php:151
+msgid "Orderby"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:465 inc/shortcodes/kbw-custompost.php:796
+#: inc/shortcodes/kbw-post.php:620
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:511 inc/shortcodes/kbw-post.php:666
+msgid "IDs"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:520 inc/shortcodes/kbw-post.php:675
+msgid "Exclude IDs"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:536 inc/shortcodes/kbw-custompost.php:817
+#: inc/shortcodes/kbw-post.php:691
+msgid "Class element"
+msgstr ""
+
+#: inc/shortcodes/kbw-custompost.php:574
 msgid "KBW Recent CustomPosts"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:277 inc/shortcodes/kbw-post.php:413
+#: inc/shortcodes/kbw-custompost.php:575
 msgid "Lists recent posts – useful on the homepage"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:278 inc/shortcodes/kbw-list-terms.php:296
-#: inc/shortcodes/kbw-post.php:414 inc/shortcodes/kbw-slider.php:202
-#: inc/shortcodes/product-category.php:131
+#: inc/shortcodes/kbw-custompost.php:576 inc/shortcodes/kbw-list-terms.php:305
+#: inc/shortcodes/kbw-slider.php:202 inc/shortcodes/product-category.php:131
 #: inc/shortcodes/recent-products.php:101
 #: inc/shortcodes/recent-products.php:183
 msgid "KBW Framework"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:280
+#: inc/shortcodes/kbw-custompost.php:578
 msgid "KBW Recent CustomPost"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:292
-msgid "Post Type"
-msgstr ""
-
-#: inc/shortcodes/kbw-custompost.php:299 inc/shortcodes/kbw-list-terms.php:318
-#: inc/shortcodes/kbw-post.php:428
-msgid "Layout"
-msgstr ""
-
-#: inc/shortcodes/kbw-custompost.php:418 inc/shortcodes/kbw-list-terms.php:310
-msgid "Taxonomy"
-msgstr ""
-
-#: inc/shortcodes/kbw-custompost.php:425 inc/shortcodes/kbw-post.php:553
-#: inc/shortcodes/product-category.php:156
-msgid "Category"
-msgstr ""
-
-#: inc/shortcodes/kbw-custompost.php:432 inc/shortcodes/kbw-post.php:560
-msgid "Category Link"
-msgstr ""
-
-#: inc/shortcodes/kbw-custompost.php:439 inc/shortcodes/kbw-post.php:567
-#: inc/widgets/kbw-widget-maincpt.php:152 inc/widgets/kbw-widget-posts.php:118
+#: inc/shortcodes/kbw-custompost.php:737 inc/widgets/kbw-widget-maincpt.php:152
+#: inc/widgets/kbw-widget-posts.php:118
 msgid "Featured"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:458 inc/shortcodes/kbw-list-terms.php:476
-#: inc/shortcodes/kbw-post.php:586
-msgid "Offset"
-msgstr ""
-
-#: inc/shortcodes/kbw-custompost.php:477 inc/shortcodes/kbw-list-terms.php:487
-#: inc/shortcodes/kbw-post.php:605
+#: inc/shortcodes/kbw-custompost.php:775 inc/shortcodes/kbw-list-terms.php:496
 msgid "Thumbnail"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:484 inc/shortcodes/kbw-post.php:612
+#: inc/shortcodes/kbw-custompost.php:782
 msgid "Post meta"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:491 inc/shortcodes/kbw-post.php:619
+#: inc/shortcodes/kbw-custompost.php:789
 msgid "Excerpt"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:498 inc/shortcodes/kbw-post.php:626
-msgid "Excerpt Length"
-msgstr ""
-
-#: inc/shortcodes/kbw-custompost.php:505 inc/shortcodes/kbw-post.php:633
+#: inc/shortcodes/kbw-custompost.php:803
 msgid "View all button"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:519 inc/shortcodes/kbw-post.php:647
-msgid "Class element"
-msgstr ""
-
-#: inc/shortcodes/kbw-custompost.php:526 inc/shortcodes/kbw-list-terms.php:521
-#: inc/shortcodes/kbw-post.php:654 inc/shortcodes/product-category.php:195
+#: inc/shortcodes/kbw-custompost.php:824 inc/shortcodes/kbw-list-terms.php:530
+#: inc/shortcodes/product-category.php:195
 #: inc/shortcodes/recent-products.php:158
 msgid "Order"
 msgstr ""
 
-#: inc/shortcodes/kbw-custompost.php:537 inc/shortcodes/kbw-list-terms.php:532
-#: inc/shortcodes/kbw-post.php:665 inc/shortcodes/product-category.php:188
-#: inc/shortcodes/recent-products.php:151
-msgid "Orderby"
-msgstr ""
-
-#: inc/shortcodes/kbw-custompost.php:544 inc/shortcodes/kbw-post.php:672
+#: inc/shortcodes/kbw-custompost.php:842
 msgid "Custom Layout"
 msgstr ""
 
-#: inc/shortcodes/kbw-list-terms.php:285
-#, fuzzy
-#| msgid "Product"
+#: inc/shortcodes/kbw-list-terms.php:294
 msgid "Product Category"
-msgstr "Sản phẩm"
+msgstr "Danh mục sản phẩm"
 
-#: inc/shortcodes/kbw-list-terms.php:294 inc/shortcodes/kbw-list-terms.php:298
+#: inc/shortcodes/kbw-list-terms.php:303 inc/shortcodes/kbw-list-terms.php:307
 msgid "KBW Terms"
 msgstr ""
 
-#: inc/shortcodes/kbw-list-terms.php:454
+#: inc/shortcodes/kbw-list-terms.php:463
 msgid "Parent ID"
 msgstr ""
 
-#: inc/shortcodes/kbw-post.php:412
-msgid "KBW Recent Posts"
+#: inc/shortcodes/kbw-post.php:416
+msgid "KBW Post"
 msgstr ""
 
-#: inc/shortcodes/kbw-post.php:416
-msgid "KBW Recent Post"
+#: inc/shortcodes/kbw-post.php:420
+msgid "KBW Post Description"
 msgstr ""
 
 #: inc/shortcodes/kbw-slider.php:77 inc/shortcodes/product-category.php:109
@@ -3440,10 +3543,6 @@ msgstr ""
 
 #: inc/shortcodes/kbw-slider.php:223
 msgid "Theme"
-msgstr ""
-
-#: inc/shortcodes/kbw-slider.php:230
-msgid "Image size"
 msgstr ""
 
 #: inc/shortcodes/kbw-slider.php:257
@@ -3549,90 +3648,95 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: inc/theme-functions.php:102
+#: inc/theme-functions.php:104
 msgid "Home"
 msgstr "Trang chủ"
 
-#: inc/theme-functions.php:149
+#: inc/theme-functions.php:110 inc/theme-functions.php:146
+msgid "Blog"
+msgstr ""
+
+#: inc/theme-functions.php:166
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: inc/theme-functions.php:177
-#, php-format
-msgid "Tag Archives: %s"
-msgstr ""
-
-#: inc/theme-functions.php:187
+#: inc/theme-functions.php:204 inc/theme-functions.php:265
 msgid "Not Found"
 msgstr ""
 
-#: inc/theme-functions.php:193
+#: inc/theme-functions.php:210
 msgid "page"
 msgstr "Trang"
 
-#: inc/theme-functions.php:221 inc/theme-functions.php:244
+#: inc/theme-functions.php:230
+#, fuzzy
+#| msgid "Related Posts"
+msgid "Latest Posts"
+msgstr "Bài viết khác"
+
+#: inc/theme-functions.php:243
 #, php-format
 msgid "Search Results for: <small>%s</small>"
 msgstr ""
 
-#: inc/theme-functions.php:226
+#: inc/theme-functions.php:248
 #, php-format
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: inc/theme-functions.php:228
+#: inc/theme-functions.php:250
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: inc/theme-functions.php:230
+#: inc/theme-functions.php:252
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: inc/theme-functions.php:232
+#: inc/theme-functions.php:254
 #, php-format
 msgid "Author: %s"
 msgstr ""
 
-#: inc/theme-functions.php:236
+#: inc/theme-functions.php:259
 #, php-format
-msgid "%1$s: %2$s"
+msgid "Search Results for: <small>&ldquo;%s&rdquo;</small>"
 msgstr ""
 
-#: inc/theme-functions.php:239
+#: inc/theme-functions.php:262
 #, php-format
-msgid "Tag: %s"
+msgid "&nbsp;&ndash; Page %s"
 msgstr ""
 
-#: inc/theme-functions.php:360
+#: inc/theme-functions.php:388
 msgid "Pingback:"
 msgstr ""
 
-#: inc/theme-functions.php:375
+#: inc/theme-functions.php:403
 #, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr ""
 
-#: inc/theme-functions.php:377
+#: inc/theme-functions.php:405
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/theme-functions.php:593
+#: inc/theme-functions.php:621
 msgid "Product"
 msgstr "Sản phẩm"
 
-#: inc/theme-functions.php:594
+#: inc/theme-functions.php:622
 msgid "Article"
 msgstr "Bài viết"
 
-#: inc/theme-functions.php:746
+#: inc/theme-functions.php:774
 #, php-format
 msgid "%s ago"
 msgstr "%s trước"
 
-#: inc/theme-functions.php:951
+#: inc/theme-functions.php:979
 msgid "Send message for us with Facebook"
 msgstr ""
 
@@ -3837,7 +3941,7 @@ msgstr ""
 msgid "Báo giá"
 msgstr ""
 
-#: single-maincpt.php:166 single.php:57
+#: single-maincpt.php:166 single.php:59
 msgid "Tags"
 msgstr ""
 
@@ -3918,6 +4022,6 @@ msgstr "lượt xem"
 msgid "Related Products"
 msgstr "Sản phẩm liên quan"
 
-#: templates/related/related-posts.php:15
+#: templates/related/related-post.php:15
 msgid "Related Posts"
 msgstr "Bài viết khác"

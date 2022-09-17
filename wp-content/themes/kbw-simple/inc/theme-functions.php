@@ -28,7 +28,7 @@ if (!function_exists('kbw_page_class')) {
         $class = 'content';
         
         if (is_single() || is_page()) {
-            $class .= ' single';
+            $class .= ' single' . (is_page() ? ' single-page' : ' single-post');
             $header_animation = '';
             if (!empty($header_animation)) $class .= ' ' . $header_animation;
         }
@@ -88,8 +88,10 @@ function kbw_breadcrumbs()
 {
     $show = apply_filters('kbw_show_breadcrumbs', false);
     if (kbw_get_option('breadcrumbs') || $show) {
+        $bc_delimiter = kbw_get_option('breadcrumbs_delimiter') ? kbw_get_option('breadcrumbs_delimiter') : '&raquo;';
+        $bc_delimiter = apply_filters('kbw_breadcrumbs_delimiter', $bc_delimiter);
         $delimiter = '<span class="delimiter">';
-        $delimiter .= kbw_get_option('breadcrumbs_delimiter') ? kbw_get_option('breadcrumbs_delimiter') : '&raquo;';
+        $delimiter .= $bc_delimiter;
         $delimiter .= '</span>';
         $before = '<span class="current">';
         $after = '</span>';
@@ -103,12 +105,20 @@ function kbw_breadcrumbs()
             
             if (is_category()) {
                 global $wp_query;
+    
+                if (apply_filters('kbw_blog_base', false)) {
+                    $blog_base = apply_filters('kbw_blog_base_text', __('Blog', 'kbw'));
+                    $blog_base_link = get_option('page_for_posts') > 0 ? get_page_link(get_option('page_for_posts')) : 'javascript: void(0)';
+                    $blog_base_link = apply_filters('kbw_blog_base_link', $blog_base_link);
+                    echo '<span><a href="' . $blog_base_link . '">' . $blog_base . '</a></span>' . $delimiter;
+                }
+                
                 $cat_obj = $wp_query->get_queried_object();
                 $thisCat = $cat_obj->term_id;
                 $thisCat = get_category($thisCat);
                 $parentCat = get_category($thisCat->parent);
                 if ($thisCat->parent != 0) {
-                    if (!is_wp_error($cat_code = get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '))) {
+                    if (!is_wp_error($cat_code = get_category_parents($parentCat->term_id, TRUE, ' ' . $delimiter . ' '))) {
                         $cat_code = str_replace('<a', '<span><a', $cat_code);
                         echo $cat_code = str_replace('</a>', '</a></span>', $cat_code);
                     }
@@ -132,10 +142,17 @@ function kbw_breadcrumbs()
                     echo '<span><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></span> ' . $delimiter . ' ';
                     echo $before . get_the_title() . $after;
                 } else {
+                    if (apply_filters('kbw_blog_base', false)) {
+                        $blog_base = apply_filters('kbw_blog_base_text', __('Blog', 'kbw'));
+                        $blog_base_link = get_option('page_for_posts') > 0 ? get_page_link(get_option('page_for_posts')) : 'javascript: void(0)';
+                        $blog_base_link = apply_filters('kbw_blog_base_link', $blog_base_link);
+                        echo '<span><a href="' . $blog_base_link . '">' . $blog_base . '</a></span>' . $delimiter;
+                    }
+                    
                     $cat = get_the_category();
                     $cat = $cat[0];
                     if (!empty($cat)) {
-                        if (!is_wp_error($cat_code = get_category_parents($cat, TRUE, ' ' . $delimiter . ' '))) {
+                        if (!is_wp_error($cat_code = get_category_parents($cat->term_id, TRUE, ' ' . $delimiter . ' '))) {
                             $cat_code = str_replace('<a', '<span><a', $cat_code);
                             echo $cat_code = str_replace('</a>', '</a></span>', $cat_code);
                         }

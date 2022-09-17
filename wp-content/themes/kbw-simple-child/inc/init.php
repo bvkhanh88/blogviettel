@@ -79,9 +79,18 @@ function kbw_layout_custom_post_func($all_args)
 }
 
 
-// On/Off
+// Theme filter
 add_filter('kbw_testi_type_enable', function() {
     return true;
+});
+add_filter('kbw_breadcrumbs_delimiter', function() {
+    return ' / ';
+});
+add_filter('kbw_blog_base', function() {
+    return true;
+});
+add_filter('kbw_blog_base_link', function() {
+    return get_page_link(PAGE_BLOG);
 });
 
 /* Project Post Type */

@@ -29,6 +29,7 @@ html body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-shadow: none !important;
+    color: #333333;
 }
 @media (min-width: 576px) {
     html body {font-size: 16px;line-height: 1.6;}
@@ -258,7 +259,7 @@ a.alink-arrow:before, .alink-arrow-wrap a:before {
 }
 #page .bc-wrap img {width: 100vw;position: absolute;top: 0;left: 50%;transform: translateX(-50%);}
 #page .bc-wrap .bc-inner {flex-direction: column;position: relative;z-index: 1;}
-#page .bc-wrap .bc-inner > div {width: 100%;text-align: center;}
+#page .bc-wrap .bc-inner > div:not(.kbw-search) {width: 100%;text-align: center;}
 #page .bc-wrap .kbw-breadcrumb {margin-bottom: 12px;padding: 0;}
 #page .bc-wrap .kbw-breadcrumb a, #page .bc-wrap .kbw-breadcrumb span {color: #fff;font-size: 16px;font-weight: 400;text-transform: none;}
 #page .bc-wrap .kbw-breadcrumb span.current {color: #EE0033;}
@@ -325,11 +326,11 @@ a.alink-arrow:before, .alink-arrow-wrap a:before {
 
 /* Detail Item Style */
 .post-single-content {}
-#page.single .bc-wrap .kbw-breadcrumb span.current, #page.single .bc-wrap .kbw-breadcrumb span:nth-last-child(2) {display: none;}
-#page.single .bc-wrap img {}
-#page.single .bc-wrap .kbw-breadcrumb span:nth-last-child(3) a {color: #EE0033;}
-#page.single .bc-wrap .time {color: #BDBDBD;padding: 10px 0 20px;}
-#page.single .bc-wrap .time a {color: #BDBDBD;}
+#page.single-post .bc-wrap .kbw-breadcrumb span.current, #page.single-post .bc-wrap .kbw-breadcrumb span:nth-last-child(2) {display: none;}
+#page.single-post .bc-wrap img {}
+#page.single-post .bc-wrap .kbw-breadcrumb span:nth-last-child(3) a {color: #EE0033;}
+#page.single-post .bc-wrap .time {color: #BDBDBD;padding: 10px 0 20px;}
+#page.single-post .bc-wrap .time a {color: #BDBDBD;}
 
 article .tags {padding-top: 0;}
 .tags .heading-title {margin-bottom: 40px;}
@@ -469,6 +470,7 @@ body.wpb-js-composer #page {}
     padding: 20px 30px;
     background-color: #EE0033;
     color: #fff;
+    font-size: 16px;
     font-weight: 600;
     border: none;
     border-radius: 90px;
