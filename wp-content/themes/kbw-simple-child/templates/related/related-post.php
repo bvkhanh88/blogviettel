@@ -12,7 +12,7 @@ $thumbnail = 'kbw-thumbnail';
 $related_column = kbw_get_option('single_related_post_column') ? kbw_get_option('single_related_post_column') : 3;
 
 if ($my_query->have_posts()) { ?>
-    <section class="related-posts mt-4">
+    <section class="related-posts mt-4 wow fadeInUp">
         <h4 class="widget-title"><span class="inline-title"><?php echo __('Related Posts', 'kbw') ?></span></h4>
         <div class="post-listing">
             <div class="listing-wrap <?php echo $style == 'grid' ? 'row row-flex-20 row-post' : 'clearfix'; ?>">

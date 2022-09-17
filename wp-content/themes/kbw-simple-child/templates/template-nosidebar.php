@@ -21,7 +21,7 @@ $banner_id = $banner_id ? $banner_id : 55;
                 <div class="kbw-row-stretch bc-wrap">
                     <img src="<?php echo kbw_wp_img_src($banner_id, 'full') ?>" alt="Banner">
                     <div class="container p-0">
-                        <div class="bc-inner d-flex justify-content-center align-items-center">
+                        <div class="bc-inner d-flex justify-content-center align-items-center wow fadeInDown">
                             <h1 class="title entry-title"><?php kbw_title(); ?></h1>
                             <?php kbw_breadcrumbs(); ?>
                             <?php echo kbw_search_form('post') ?>

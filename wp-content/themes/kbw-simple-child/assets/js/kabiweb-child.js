@@ -69,6 +69,9 @@ jQuery(document).ready(function ($) {
     });
 
 
+    //Initiate the wowjs animation library
+    new WOW().init();
+
     // Fixed when scroll
     if ($(window).width() > 991) {
         var elm_fixed = $('#site-header');

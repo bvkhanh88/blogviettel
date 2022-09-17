@@ -38,7 +38,7 @@ $banner_id = !empty($banner_id) ? $banner_id : 55;
         <div class="kbw-row-stretch bc-wrap">
             <img src="<?php echo kbw_wp_img_src($banner_id, 'full') ?>" alt="Banner">
             <div class="container p-0">
-                <div class="bc-inner d-flex justify-content-center align-items-center">
+                <div class="bc-inner d-flex justify-content-center align-items-center wow fadeInUp">
                     <h1 class="title entry-title"><?php kbw_title(); ?></h1>
                     <?php kbw_breadcrumbs(); ?>
                     <?php //echo kbw_search_form('post') ?>
@@ -47,7 +47,7 @@ $banner_id = !empty($banner_id) ? $banner_id : 55;
         </div>
         <div class="<?php echo $kbw_article_class; ?>">
             <?php if (!empty($term_description)) echo '<div class="clear"></div><div class="archive-description">' . $term_description . '</div>'; ?>
-            <div class="post-listing archive-box <?php echo $layout_custom; ?>">
+            <div class="post-listing archive-box <?php echo $layout_custom; ?> wow fadeInUp">
                 <?php $i = $j = 1; ?>
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <?php get_template_part('templates/loops/post-item', $layout_custom); ?>

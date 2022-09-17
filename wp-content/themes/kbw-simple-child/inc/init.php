@@ -93,6 +93,12 @@ add_filter('kbw_blog_base_link', function() {
     return get_page_link(PAGE_BLOG);
 });
 
+// Get Current Lang
+function kbw_get_current_lang()
+{
+    return get_bloginfo('language');
+}
+
 /* Project Post Type */
 if (!function_exists('kbw_project_content_type')) {
     add_action('init', 'kbw_project_content_type');
@@ -180,6 +186,9 @@ function kbw_listing_category_shortcode($atts, $content = null)
         $current_termid = $category_obj->term_id;
     }
     
+    $class = empty($class) ? '' : (' ' . $class);
+    $style = empty($style) ? '' : (' ' . $style);
+    
     $cat_include = ($ids != '' && strpos($ids, ',') !== false) ? explode(',', $ids) : array($ids);
     $cat_exclude = ($exclude != '' && strpos($exclude, ',') !== false) ? explode(',', $exclude) : array($exclude);
     
@@ -213,7 +222,7 @@ function kbw_listing_category_shortcode($atts, $content = null)
     
     <?php
     if ($layout == 'menu') { ?>
-        <div class="kbw-menu-category">
+        <div class="kbw-menu-category<?php echo $class; ?>">
             <?php if ($title != '' && $title != 'hide') echo '<div class="heading-title">' . $title . '</div>'; ?>
             <ul class="menu-term">
                 <li class="item-term-menu <?php echo $current_termid == 0 ? 'active' : ''; ?>"><a href="<?php echo get_page_link(PAGE_BLOG) ?>"><span><?php echo __('All', 'kbw') ?></span></a></li>

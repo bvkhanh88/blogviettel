@@ -19,7 +19,7 @@ $copyright = htmlspecialchars_decode($copyright);
 
 <?php do_action('kbw_before_footer'); ?>
 <footer id="site-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-    <div class="inner">
+    <div class="inner wow fadeInUp">
         <div class="<?php echo $kbw_footer_container_class; ?> p-0">
             <div class="row row-flex-25">
                 <div class="col-12 col-lg-4">

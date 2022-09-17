@@ -58,7 +58,7 @@ $kbw_logo = kbw_get_option('logo');
             <div id="header" class="header-main">
                 <div class="<?php echo $kbw_header_container_class; ?> p-0">
                     <div class="row-header d-flex justify-content-between align-items-center">
-                        <div class="header-logo header-left">
+                        <div class="header-logo header-left wow fadeInLeft">
                             <?php if ($kbw_logo != '') { ?>
                                 <?php if (is_front_page() || is_home() || is_404()) { ?>
                                     <h1 id="logo" class="image-logo" itemprop="headline">
@@ -81,7 +81,7 @@ $kbw_logo = kbw_get_option('logo');
                                 <?php } ?>
                             <?php } ?>
                         </div>
-                        <div class="header-menu header-right">
+                        <div class="header-menu header-right wow fadeInRight">
                             <div id="catcher" class="clear"></div>
                             <div id="kbw-navigation" class="sticky-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
                                 <a href="#" id="pull" class="toggle-mobile-menu hide"><?php _e('Menu', 'kbw'); ?></a>
@@ -111,7 +111,7 @@ $kbw_logo = kbw_get_option('logo');
                                 </nav>
                             </div>
                         </div>
-                        <div class="header-language">
+                        <div class="header-language wow fadeInRight">
                             <a href="/en" class="en"><img src="<?php echo KBWCHILD_THEME_DIRECTORY_URI . '/assets/img/icons/flag-en.png' ?>" alt="English"></a>
                             <a href="/" class="vi"><img src="<?php echo KBWCHILD_THEME_DIRECTORY_URI . '/assets/img/icons/flag-2.png' ?>" alt="Vietnamese"></a>
                             <?php if (is_page_template('templates/template-landingpage.php')) { ?>

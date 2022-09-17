@@ -34,7 +34,7 @@ $banner_id = !empty($banner_id) ? $banner_id : 55;
             <div class="kbw-row-stretch bc-wrap">
                 <img src="<?php echo kbw_wp_img_src($banner_id, 'full') ?>" alt="Banner">
                 <div class="container p-0">
-                    <div class="bc-inner d-flex justify-content-center align-items-center">
+                    <div class="bc-inner d-flex justify-content-center align-items-center wow fadeInUp">
                         <h1 class="title entry-title"><?php kbw_title(); ?></h1>
                         <?php kbw_breadcrumbs(); ?>
                         <?php echo kbw_search_form('post') ?>
@@ -45,10 +45,9 @@ $banner_id = !empty($banner_id) ? $banner_id : 55;
         <article class="<?php echo $kbw_article_class; ?>" id="the-post">
             <?php if (have_posts()) while (have_posts()) : the_post(); ?>
                 <?php if (wp_get_current_user()->ID != 1 && function_exists('kbw_setPostViews')) kbw_setPostViews(); ?>
-                <?php kbw_breadcrumbs(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('g post'); ?>>
                     <div class="single-page">
-                        <div class="post-single-content box mark-links entry-content">
+                        <div class="post-single-content box mark-links entry-content wow fadeInUp">
                             <?php the_content(); ?>
                         </div><!--.post-content box mark-links-->
                         <div class="clear clear-30"></div>

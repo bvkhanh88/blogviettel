@@ -538,17 +538,52 @@ body.wpb-js-composer #page {}
     pointer-events: none!important;
 }
 #row_02 .vc_title h5 {color: #fff;}
+#row_02 .wpb_column.btn-control {margin-top: 35px;}
 #row_02 .wpb_column.btn-control .wpb_wrapper {justify-content: start;}
 #row_02 .slick-arrow {display: none!important;}
 
 #row_02 .services .wpb_wrapper {max-width: 753px;position: relative;z-index: 1;}
+@media (min-width: 1280px) {
+    #row_02 .services .wpb_wrapper {transform: translateX(15px);}
+    .services .wpb_wrapper:before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 100%;
+        top:0;
+        left: -15px;
+        bottom: 0;
+        border-radius: 15px 0 0 15px;
+        border-style: solid;
+        border-width: 1px 0 1px 1px;
+        border-color: #1A419F;
+        background-color: #040837;
+        z-index: 10;
+    }
+    .services .wpb_wrapper:after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 100%;
+        top: 0;
+        right: -15px;
+        bottom: 0;
+        border-radius: 0 15px 15px 0;
+        border-style: solid;
+        border-width: 1px 1px 1px 0;
+        border-color: #1A419F;
+        background-color: #040837;
+        z-index: 10;
+    }
+}
 
-.kbw-box.style3 {background-color: transparent;padding: 12px;margin-bottom: 35px;}
+.kbw-box.style3 {background-color: transparent;padding: 0 12px;margin-bottom: 0;}
 .kbw-box.style3 .kbw-box-inner {
     position: relative;
     background-color: #040837;
     border: 1px solid #1A419F;
-    border-radius: 15px;box-shadow: 0 11px 22px -4px rgba(54, 96, 205, 0.25);
+    border-radius: 15px;
+    box-shadow: 0 11px 22px -4px rgba(54, 96, 205, 0.25);
     min-height: 356px;
     display: flex;
     flex-direction: column;
@@ -571,7 +606,7 @@ body.wpb-js-composer #page {}
 .kbw-box.style3 .box-text {font-size: 14px;}
 .kbw-box.style3 a {color: #fff;font-weight: 700;font-size: 14px;}
 @media (min-width: 1280px) {
-    #row_02 .vc_title h2 {margin-bottom: 30px;}
+    #row_02 .vc_title h2 {margin-bottom: 40px;}
 }
 
 #row_03 {padding-bottom: 0;}

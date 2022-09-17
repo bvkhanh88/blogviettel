@@ -39,6 +39,8 @@ $author_title = get_the_author_meta('display_name', $author_id);
 $pid = get_the_ID();
 $banner_id = get_post_thumbnail_id($pid);
 $banner_id = !empty($banner_id) ? $banner_id : 55;
+
+$currLang = kbw_get_current_lang();
 ?>
 
 <?php get_header(); ?>
@@ -47,7 +49,7 @@ $banner_id = !empty($banner_id) ? $banner_id : 55;
         <div class="kbw-row-stretch bc-wrap">
             <img src="<?php echo kbw_wp_img_src($banner_id, 'full') ?>" alt="Banner">
             <div class="container p-0">
-                <div class="bc-inner d-flex justify-content-center align-items-center">
+                <div class="bc-inner d-flex justify-content-center align-items-center wow fadeInUp">
                     <h1 class="title category postsby"><?php kbw_title(); ?></h1>
                     <div class="time"><?php echo sprintf('%1$s | by <a href="%2$s" class="postby">%3$s</a>', $post_time, $author_link, $author_title); ?></div>
                     <?php kbw_breadcrumbs(); ?>
@@ -59,7 +61,7 @@ $banner_id = !empty($banner_id) ? $banner_id : 55;
             <?php if (have_posts()) while (have_posts()) : the_post(); ?>
                 <?php if (wp_get_current_user()->ID != 1) kbw_setPostViews(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('g post'); ?>>
-                    <div class="post-single-content box mark-links entry-content kbw-lightgallery">
+                    <div class="post-single-content box mark-links entry-content kbw-lightgallery wow fadeInUp">
                         <div class="row">
                             <div class="col-lg-9">
                                 <div class="thecontent clearfix">
