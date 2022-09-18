@@ -121,8 +121,9 @@ $kbw_logo = kbw_get_option('logo');
                             <?php } else { ?>
                                 <a href="javascript: void(0)" class="btn btn-link"><?php echo __('Get Started', 'kbw') ?></a>
                             <?php } ?>
-                            <button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>
                         </div>
+                        
+                        <button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>
                     </div>
                 </div>
             </div>
