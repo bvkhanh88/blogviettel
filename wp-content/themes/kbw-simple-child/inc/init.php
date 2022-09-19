@@ -80,16 +80,16 @@ function kbw_layout_custom_post_func($all_args)
 
 
 // Theme filter
-add_filter('kbw_testi_type_enable', function() {
+add_filter('kbw_testi_type_enable', function () {
     return true;
 });
-add_filter('kbw_breadcrumbs_delimiter', function() {
+add_filter('kbw_breadcrumbs_delimiter', function () {
     return ' / ';
 });
-add_filter('kbw_blog_base', function() {
+add_filter('kbw_blog_base', function () {
     return true;
 });
-add_filter('kbw_blog_base_link', function() {
+add_filter('kbw_blog_base_link', function () {
     return get_page_link(PAGE_BLOG);
 });
 
@@ -97,6 +97,26 @@ add_filter('kbw_blog_base_link', function() {
 function kbw_get_current_lang()
 {
     return get_bloginfo('language');
+}
+
+// KBW Panel Extra
+add_filter('kbw_custom_options_extra', 'kbw_custom_options_extra_html');
+function kbw_custom_options_extra_html()
+{
+    ob_start();
+    
+    kbw_options(
+        array(
+            "name" => __("Link Get started", 'kbw'),
+            "id" => "link_getstarted",
+            "type" => "text",
+            "default" => ""
+        )
+    );
+    
+    $output = ob_get_contents();
+    ob_end_clean();
+    return $output;
 }
 
 /* Project Post Type */
@@ -225,13 +245,19 @@ function kbw_listing_category_shortcode($atts, $content = null)
         <div class="kbw-menu-category<?php echo $class; ?>">
             <?php if ($title != '' && $title != 'hide') echo '<div class="heading-title">' . $title . '</div>'; ?>
             <ul class="menu-term">
-                <li class="item-term-menu <?php echo $current_termid == 0 ? 'active' : ''; ?>"><a href="<?php echo get_page_link(PAGE_BLOG) ?>"><span><?php echo __('All', 'kbw') ?></span></a></li>
+                <li class="item-term-menu <?php echo $current_termid == 0 ? 'active' : ''; ?>">
+                    <a href="<?php echo get_page_link(PAGE_BLOG) ?>"><span><?php echo __('All', 'kbw') ?></span></a>
+                </li>
                 
                 <?php foreach ($cat_terms as $term) { ?>
                     <?php if ($term->term_id == $current_termid) { ?>
-                        <li class="item-term-menu active"><a href="<?php echo get_term_link($term->term_id) ?>"><span><?php echo $term->name ?></span></a></li>
+                        <li class="item-term-menu active">
+                            <a href="<?php echo get_term_link($term->term_id) ?>"><span><?php echo $term->name ?></span></a>
+                        </li>
                     <?php } else { ?>
-                        <li class="item-term-menu"><a href="<?php echo get_term_link($term->term_id) ?>"><span><?php echo $term->name ?></span></a></li>
+                        <li class="item-term-menu">
+                            <a href="<?php echo get_term_link($term->term_id) ?>"><span><?php echo $term->name ?></span></a>
+                        </li>
                     <?php } ?>
                 <?php } ?>
             </ul>

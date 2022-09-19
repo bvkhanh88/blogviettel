@@ -119,7 +119,7 @@ $kbw_logo = kbw_get_option('logo');
                                     <a href="javascript: void(0)" class="btn-search"><img src="<?php echo KBWCHILD_THEME_DIRECTORY_URI . '/assets/img/icons/icon-search.png' ?>" alt="Search"></a>
                                 </div>
                             <?php } else { ?>
-                                <a href="javascript: void(0)" class="btn btn-link"><?php echo __('Get Started', 'kbw') ?></a>
+                                <a href="<?php echo kbw_get_option('link_getstarted') ?>" class="btn btn-link"><?php echo __('Get Started', 'kbw') ?></a>
                             <?php } ?>
                         </div>
                         
