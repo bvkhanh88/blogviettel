@@ -216,7 +216,7 @@ if (!function_exists('kbw_register_testimonial_meta_boxes')) {
                 'id' => "{$prefix}link",
                 'desc' => __('', 'kbw'),
                 'type' => 'text',
-                'std' => 'https://kabivi.com',
+                'std' => 'https://kabiweb.com',
             ),
             array(
                 'name' => esc_html__('Social', 'hkt'),
